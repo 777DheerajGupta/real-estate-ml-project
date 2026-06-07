@@ -5,9 +5,6 @@ import pandas as pd
 
 BUCKET_NAME = "realestate-ml-models-413027378663-ap-southeast-2-an"
 
-
-# print(sts.get_caller_identity())
-
 def download_file(filename):
     """Download a single file from S3 if not already present"""
     local_path = f"datasets/{filename}"
@@ -19,20 +16,8 @@ def download_file(filename):
             's3',
             aws_access_key_id     = os.environ.get('AWS_ACCESS_KEY_ID'),
             aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY'),
-            region_name = os.environ.get('AWS_REGION', 'ap-southeast-2')
+            region_name           = os.environ.get('AWS_REGION', 'ap-southeast-2')
         )
-        s3.download_file(BUCKET_NAME, filename, local_path)
-        print(f"✅ {filename} downloaded")
-
-        print("AWS Identity:", sts.get_caller_identity())
-
-        s3 = boto3.client(
-            's3',
-            aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
-            aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY'),
-            region_name=os.environ.get('AWS_REGION', 'ap-southeast-2')
-        )
-
         s3.download_file(BUCKET_NAME, filename, local_path)
         print(f"✅ {filename} downloaded")
     else:

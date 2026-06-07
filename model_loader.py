@@ -6,7 +6,7 @@ import pandas as pd
 BUCKET_NAME = "realestate-ml-models-413027378663-ap-southeast-2-an"
 
 
-print(sts.get_caller_identity())
+# print(sts.get_caller_identity())
 
 def download_file(filename):
     """Download a single file from S3 if not already present"""

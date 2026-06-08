@@ -16,7 +16,6 @@ def load_models():
 new_df, feature_text = load_models()
 
 st.title("Real Estate Analysis")
-    
 
 # new_df = pd.read_csv('datasets/data_viz1.csv')
 # feature_text = pickle.load(open('datasets/feature_text.pkl', 'rb'))

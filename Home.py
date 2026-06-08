@@ -8,7 +8,7 @@ st.set_page_config(
 
 # Title and Header
 st.title("Welcome to Real Estate Insights!")
-st.subheader("Get Price Predictions, Trend Analysis, and Apartment Recommendations")
+st.subheader("Get Price Predictions, Trend Analysis, and Apartment Recommendations 🚀")
 
 st.write("Explore our powerful features to assist with your real estate needs:")
 
